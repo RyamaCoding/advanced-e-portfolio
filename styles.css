@@ -17,7 +17,10 @@ section {
 }
 
 .click{
-    transition: 200ms all ease;
+    transition: all 300ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .click:active {
@@ -26,6 +29,10 @@ section {
 
 .click:hover {
     transform: scale(1.1);
+}
+
+button {
+    cursor: pointer;
 }
 
 
@@ -90,6 +97,57 @@ a{
     border-radius: 50%;
 }
 
+.mail__btn{
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: #242424;
+    color: white;
+    position: absolute;
+    bottom: 32px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.scroll__icon{
+    width: 20px;
+    height: 30px;
+    border: 2px solid #242424;
+    border-radius: 24px;
+}
+
+.scroll__icon:after{
+    content: "";
+    background-color: #242424;
+    width: 4px;
+    height: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scroll 1000ms infinite alternate-reverse;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
 /* NAVIGATION */
 
 nav{
@@ -121,6 +179,7 @@ nav{
     filter: invert(1);
     width: 50px;
     height: 50px;
+    border-radius: 32px
 }
 
 .fa-adjust{
